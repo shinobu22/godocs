@@ -51,7 +51,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/shinobu22/godocs/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -159,6 +159,16 @@ const config = {
   ],
   plugins: [
     'docusaurus2-dotenv',
+    [
+      "@orama/plugin-docusaurus-v3",
+      {
+        cloud: {
+          apiKey: process.env.ORAMA_CLOUD_PRIVATE_API_KEY,
+          indexId: "YOUR_ORAMA_CLOUD_INDEX_ID",
+          deploy: process.env.ENABLE_ORAMA_CLOUD_DEPLOY,
+        },
+      },
+    ],
   ],
 };
 

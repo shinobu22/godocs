@@ -25,7 +25,7 @@ const sidebars = {
     {
       type: 'doc',
       id: 'home',
-      label: 'หน้าหลัก'
+      label: '🏠 เริ่มต้นใช้งาน'
     },
     {
       type: 'category',
@@ -34,7 +34,7 @@ const sidebars = {
         {
           type: 'doc',
           id: 'statuses/sales-order',
-          label: '📦 สถานะคำสั่งซื้อ'
+          label: '🛒 สถานะคำสั่งซื้อ'
         },
         {
           type: 'doc',
@@ -47,7 +47,44 @@ const sidebars = {
           label: '💰 สถานะการชำระเงิน'
         }
       ]
-    }
+    },
+    {
+      type: 'category',
+      label: '📦 ระบบสต็อก',
+      items: [
+        {
+          type: 'doc',
+          label: 'Version 2',
+          id: 'stock/v2',
+        },
+        {
+          type: 'doc',
+          label: 'Version 1',
+          id: 'stock/v1',
+        }
+      ]
+    },
+    {
+      type: 'category',
+      label: '💡 อัพเซล',
+      items: [
+        {
+          type: 'doc',
+          label: 'อัพเซลคืออะไร?',
+          id: 'upsell/introduction',
+        },
+        {
+          type: 'doc',
+          label: 'Version 3',
+          id: 'upsell/v3',
+        },
+        {
+          type: 'doc',
+          label: 'Version 1',
+          id: 'upsell/v1',
+        }
+      ]
+    },
   ]
 };
 
