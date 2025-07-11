@@ -20,14 +20,14 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://gosaas.app',
+  url: 'https://shiobu22.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/godocs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'gosaas-worldwide', // Usually your GitHub org/user name.
+  organizationName: 'shinobu22', // Usually your GitHub org/user name.
   projectName: 'godocs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -109,7 +109,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/home',
               },
             ],
           },
@@ -159,16 +159,6 @@ const config = {
   ],
   plugins: [
     'docusaurus2-dotenv',
-    [
-      "@orama/plugin-docusaurus-v3",
-      {
-        cloud: {
-          apiKey: process.env.ORAMA_CLOUD_PRIVATE_API_KEY,
-          indexId: "YOUR_ORAMA_CLOUD_INDEX_ID",
-          deploy: process.env.ENABLE_ORAMA_CLOUD_DEPLOY,
-        },
-      },
-    ],
   ],
 };
 
