@@ -29,17 +29,22 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'กระบวนการทำงาน',
+      label: '📍 สถานะ',
       items: [
         {
           type: 'doc',
-          id: 'module-process/order-process',
-          label: 'สถานะคำสั่งซื้อ'
+          id: 'statuses/sales-order',
+          label: '📦 สถานะคำสั่งซื้อ'
         },
         {
           type: 'doc',
-          id: 'module-process/shipment-process',
-          label: 'สถานะการจัดส่ง'
+          id: 'statuses/shipment',
+          label: '🚚 สถานะการจัดส่ง'
+        },
+        {
+          type: 'doc',
+          id: 'statuses/payment',
+          label: '💰 สถานะการชำระเงิน'
         }
       ]
     }
