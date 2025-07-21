@@ -47,11 +47,17 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/shinobu22/godocs/tree/main/',
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/shinobu22/godocs/edit/main/',
+
+          // ✅ ชี้ว่า '1.0.0' คือเวอร์ชันล่าสุด
+          lastVersion: 'current',
+          versions: {
+            'current': {
+              label: 'v1.0.0',
+              path: '', // ให้เป็น root (docs/)
+            },
+          },
         },
         blog: {
           showReadingTime: true,
@@ -59,17 +65,14 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
+            'https://github.com/shinobu22/godocs/edit/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -94,6 +97,10 @@ const config = {
             label: 'Documentation',
           },
           // { to: '/blog', label: 'Blog', position: 'left' },
+          // {
+          //   type: 'docsVersionDropdown', // ✅ ต้องมี
+          //   position: 'right',
+          // },
           {
             href: 'https://github.com/orgs/gosaas-worldwide',
             label: 'GitHub',
